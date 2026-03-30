@@ -1,0 +1,29 @@
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 56px 24px 48px;
+  text-align: center;
+}
+
+.empty-svg {
+  margin-bottom: 4px;
+  filter: drop-shadow(0 4px 12px rgba(79,70,229,.1));
+}
+
+.empty-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+.empty-msg {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 300px;
+  line-height: 1.6;
+}
+
+.empty-action { margin-top: 6px; }

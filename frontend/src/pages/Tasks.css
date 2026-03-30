@@ -1,0 +1,57 @@
+.page-header-actions { display: flex; align-items: center; gap: 8px; }
+
+.btn-icon {
+  width: 38px; height: 38px; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-sm);
+}
+
+.spin { animation: spin .8s linear infinite; }
+
+/* Toolbar */
+.tasks-toolbar { display: flex; gap: 10px; align-items: center; }
+
+.search-box { flex: 1; position: relative; display: flex; align-items: center; }
+.search-icon { position: absolute; left: 13px; color: var(--text-muted); pointer-events: none; z-index: 1; }
+.search-input { padding-left: 38px !important; padding-right: 36px !important; }
+.search-clear {
+  position: absolute; right: 10px; background: none; color: var(--text-muted);
+  display: flex; align-items: center; padding: 2px; border-radius: 4px; z-index: 1;
+}
+.search-clear:hover { color: var(--danger); }
+
+.sort-box { display: flex; align-items: center; gap: 8px; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
+.sort-select { width: auto; padding: 9px 12px; font-size: 13px; cursor: pointer; }
+
+/* Filter chips */
+.filter-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.filter-tab {
+  padding: 6px 15px; border-radius: 20px; font-size: 13px; font-weight: 500;
+  background: var(--surface); border: 1.5px solid var(--border); color: var(--text-muted);
+  transition: all var(--transition); white-space: nowrap;
+}
+.filter-tab:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-bg); }
+.filter-tab.active {
+  background: var(--grad-primary); border-color: transparent; color: #fff;
+  box-shadow: 0 3px 10px rgba(79,70,229,.3);
+}
+
+/* Task list */
+.task-list { display: flex; flex-direction: column; gap: 10px; }
+
+/* Skeleton loading */
+.task-skeletons { display: flex; flex-direction: column; gap: 10px; }
+
+.task-skeleton {
+  height: 76px;
+  border-radius: var(--radius);
+  background: linear-gradient(90deg, var(--surface2) 25%, var(--border) 50%, var(--surface2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@media (max-width: 600px) {
+  .tasks-toolbar { flex-wrap: wrap; }
+  .page-header-actions { flex-wrap: wrap; }
+}

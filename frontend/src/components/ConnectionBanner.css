@@ -1,0 +1,41 @@
+.conn-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  background: #fffbeb;
+  border-bottom: 1.5px solid #fcd34d;
+  font-size: 13px;
+  color: #92400e;
+  flex-wrap: wrap;
+}
+
+.dark .conn-banner {
+  background: #451a03;
+  border-bottom-color: #d97706;
+  color: #fcd34d;
+}
+
+.conn-icon { flex-shrink: 0; color: #d97706; }
+.conn-banner span { flex: 1; line-height: 1.5; min-width: 200px; }
+
+.conn-retry {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #d97706;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background .15s ease;
+}
+.conn-retry:hover:not(:disabled) { background: #b45309; }
+.conn-retry:disabled { opacity: .6; cursor: not-allowed; }
+
+.spin { animation: spin .8s linear infinite; }

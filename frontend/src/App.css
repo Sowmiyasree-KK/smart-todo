@@ -1,0 +1,30 @@
+.main-content {
+  flex: 1;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page transition */
+.page-transition-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  animation: pageEnter .38s cubic-bezier(.22,1,.36,1) forwards;
+}
+
+/* Global loading bar */
+.global-loading-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  z-index: 9999;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed, #a855f7, #ec4899, #4f46e5);
+  background-size: 300% 100%;
+  animation: loadingSlide 1.6s linear infinite;
+}
+
+@keyframes loadingSlide {
+  0%   { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}

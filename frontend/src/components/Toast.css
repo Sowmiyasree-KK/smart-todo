@@ -1,0 +1,73 @@
+.toast-container {
+  position: fixed;
+  bottom: 28px; right: 24px;
+  z-index: 9999;
+  display: flex; flex-direction: column; gap: 10px;
+  pointer-events: none;
+}
+
+.toast {
+  display: flex; align-items: center; gap: 10px;
+  padding: 13px 16px 16px;          /* extra bottom for progress bar */
+  border-radius: 14px;
+  font-size: 13.5px; font-weight: 500;
+  min-width: 280px; max-width: 380px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.18);
+  pointer-events: all;
+  transform: translateX(calc(100% + 32px));
+  opacity: 0;
+  transition: transform .32s cubic-bezier(.34,1.56,.64,1), opacity .28s ease;
+  position: relative; overflow: hidden;
+}
+
+.toast-in  { transform: translateX(0); opacity: 1; }
+.toast-out { transform: translateX(calc(100% + 32px)); opacity: 0; transition-timing-function: ease-in; }
+
+/* Progress drain bar */
+.toast-progress {
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 3px;
+  border-radius: 0 0 14px 14px;
+  transition: width .1s linear;
+}
+
+/* ── Variants ── */
+.toast-success {
+  background: #f0fdf4; border: 1.5px solid #86efac; color: #15803d;
+}
+.toast-success .toast-icon { color: #16a34a; }
+.toast-success .toast-progress { background: #16a34a; }
+
+.toast-error {
+  background: #fef2f2; border: 1.5px solid #fca5a5; color: #b91c1c;
+}
+.toast-error .toast-icon { color: #dc2626; }
+.toast-error .toast-progress { background: #dc2626; }
+
+.toast-info {
+  background: #eff6ff; border: 1.5px solid #93c5fd; color: #1d4ed8;
+}
+.toast-info .toast-icon { color: #2563eb; }
+.toast-info .toast-progress { background: #2563eb; }
+
+/* Dark mode */
+.dark .toast-success { background: #052e16; border-color: #22c55e; color: #86efac; }
+.dark .toast-error   { background: #450a0a; border-color: #ef4444; color: #fca5a5; }
+.dark .toast-info    { background: #1e3a5f; border-color: #3b82f6; color: #93c5fd; }
+
+.toast-icon { flex-shrink: 0; }
+.toast-msg  { flex: 1; line-height: 1.45; }
+
+.toast-close {
+  background: none; color: inherit; opacity: .55;
+  display: flex; align-items: center; padding: 2px;
+  border-radius: 4px; flex-shrink: 0;
+  transition: opacity .15s ease;
+}
+.toast-close:hover { opacity: 1; }
+
+@media (max-width: 480px) {
+  .toast-container { bottom: 16px; right: 12px; left: 12px; }
+  .toast { min-width: 0; max-width: 100%; }
+}
