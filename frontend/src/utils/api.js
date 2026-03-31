@@ -3,9 +3,7 @@
  * In production set VITE_API_URL to your deployed backend URL.
  */
 
-const BASE = import.meta.env.VITE_API_URL
-  ? import.meta.env.VITE_API_URL
-  : '/api';   // proxied by Vite in dev
+const BASE = 'https://smart-todo-fjk9.onrender.com';
   console.log("API BASE =", BASE);
 
 async function request(method, path, body) {
@@ -19,7 +17,7 @@ async function request(method, path, body) {
   try {
     res = await fetch(`${BASE}${path}`, opts);
   } catch {
-    throw new Error('Cannot reach the server. Is the backend running on port 5000?');
+    throw new Error('Backend temporarily unreachable. Please retry in a few seconds.');
   }
 
   let data;
