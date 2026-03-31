@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ⚡ SmartTodo — Full-Stack Productivity App
 
 ## Quick Start (2 terminals)
@@ -53,3 +54,7 @@ VITE_API_URL=https://your-backend.railway.app
 
 - **Frontend** → Vercel / Netlify (`npm run build` → deploy `dist/`)
 - **Backend**  → Railway / Render (`npm start`)
+=======
+# smart-todo
+A full-stack Smart To-Do productivity app built with React and Node.js, featuring task management, Pomodoro timer, calendar view, and real-time analytics dashboard.
+>>>>>>> 78e642f1368b87687debc40d1765be377e4c3f46
