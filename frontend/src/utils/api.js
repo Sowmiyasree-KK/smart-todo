@@ -6,6 +6,7 @@
 const BASE = import.meta.env.VITE_API_URL
   ? import.meta.env.VITE_API_URL
   : '/api';   // proxied by Vite in dev
+  console.log("API BASE =", BASE);
 
 async function request(method, path, body) {
   const opts = {
