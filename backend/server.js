@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 const ALLOWED_ORIGINS = [
   'http://localhost:5173',                                                        // Vite dev
   'http://localhost:3000',                                                        // CRA dev
-  'https://smart-todo-rer4owf65-sowmiyasree-kks-projects.vercel.app',            // Vercel deploy
+  'https://smart-todo-sigma-six.vercel.app',            // Vercel deploy
   process.env.FRONTEND_URL,                                                       // env override
 ].filter(Boolean);
 
